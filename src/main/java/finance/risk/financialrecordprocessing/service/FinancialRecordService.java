@@ -31,12 +31,7 @@ public class FinancialRecordService {
 
     // Retrieve financial records for a company within a time interval
     public List<FinancialRecord.Record> getRecords(String companyName, String startDate, String endDate) {
-        Optional<FinancialRecord> entity = repository.findByCompanyName(companyName);
-        if (entity.isPresent()) {
-            return entity.get().getRecords().stream()
-                    .filter(record -> record.getDate().compareTo(startDate) >= 0 && record.getDate().compareTo(endDate) <= 0)
-                    .toList();
-        }
-        return List.of(); // Return an empty list if no records are found
+        List<FinancialRecord.Record> entity = repository.findByCompanyNameAndDateRange(companyName, startDate, endDate);
+        return entity;
     }
 }
