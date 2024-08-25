@@ -25,4 +25,9 @@ public class FinancialRecordController {
                                                    @RequestParam String endDate) {
         return service.getRecords(companyName, startDate, endDate);
     }
+    @GetMapping("/companies")
+        public List<String> getCompanies(){
+            return service.getAllCompanyNames();
+        }
+    }
 }
