@@ -1,0 +1,4 @@
+curl -G "http://localhost:8080/financial-records" \
+     --data-urlencode "companyName=AMGN" \
+     --data-urlencode "startDate=2020-08-01" \
+     --data-urlencode "endDate=2020-08-03"

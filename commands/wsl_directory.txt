@@ -1,0 +1,1 @@
+cd /mnt/c/Users/uaysev/IdeaProjects/financial-record-processing
