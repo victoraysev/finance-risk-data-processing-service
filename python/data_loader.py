@@ -8,7 +8,7 @@ csv_file = './data/first_30_stock_prices_10_companies.csv'
 df = pd.read_csv(csv_file)
 
 # Define your API URL
-api_url = 'http://app:8080/financial-records'  # Corrected URL
+api_url = 'http://processing-app:8080/financial-records'  # Corrected URL
 
 # Retry configuration
 max_retries = 10  # Maximum number of retry attempts
